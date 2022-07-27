@@ -104,7 +104,7 @@ IF FLAG:역극 == 13
 	PRINTFORML 
 	PRINTFORML [0] 동의하고 이용한다.（구상 일부 비표시）
 	PRINTFORML [1] 대요정의 옷을 입는다.（구상 전부 표시） 
-	PRINTFORML ※역주 : 괴리감이 매우 상당합니다. 역극 모드 대요정으로 플레이 할 생각이 아니라면 0번을 누릅시다. 꼭.
+	PRINTFORML ※역주 : 대요정 플레이를 가정하고 짠 내용이 전체의 85퍼센트를 넘어갑니다. 다만 1번을 고를 경우 괴리감이 상당하니까 조심하세요 
 	INPUT
 	SELECTCASE RESULT
 		CASE 0
@@ -636,7 +636,7 @@ SETCOLOR C_AQUA
 						;PRINTFORML 
 						;PRINTFORMW 
 					CASEELSE
-						PRINTFORMW 「잔챙이는 비키시지! 온실 속에서 자란 화초는 이 추운 냉탕을 견딜 수 없으니까!」
+						PRINTFORMW 「잔챙이는 비키시지! 온실 속에서 자란 화초는 얼어죽을테니까!」
 				ENDSELECT
 			ENDIF
 			RETURN 1
@@ -790,26 +790,27 @@ SETCOLOR C_AQUA
 						;PRINTFORML 
 						;PRINTFORMW 
 					CASEELSE
-						CALL COLORMESSAGE14("　くぅ......くぅ.......",C_GREEN,2,0)
-						CALL COLORMESSAGE14("「다이짱, 気持ちよさそうに寝てるな...」",C_AQUA,2,0)
-						PRINTFORML 「起こすのはかわいそうだから寝顔見ながら待ってよーっと」
+						CALL COLORMESSAGE14("　쿠울......쿠울.......",C_GREEN,2,0)
+						CALL COLORMESSAGE14("「다이짱, 기분 좋게 자는 것 같네...」",C_AQUA,2,0)
+						PRINTFORML 「깨우는 건 기분 나쁠 테니 그냥 기다릴까?」
 						PRINTFORML 「...」
-						PRINTFORML 「......」ﾊﾟﾀﾊﾟﾀ...
-						PRINTFORMW 「待ってるの暇だし最強にカッコイイセリフでも考えてみるか」
+						PRINTFORML 「......」파닥파닥...
+						;치르노 날개 흔드는 의성음임
+						PRINTFORMW 「뭐, 기다리는 동안 최강다운 멋진 대사나 생각해야지!」
 						PRINTFORML .........
 						PRINTFORML 
 						PRINTFORML
 						PRINTFORML  
-						PRINTFORML 「『이 몸は氷系最強, 砕かれても水さえあれば何度でも蘇るさ』...うむ」
-						CALL COLORMESSAGE14("　...ねぇ치르노짱?",C_GREEN,2,0)
-						PRINTFORML 「『凍った世界では動く物質は何もなくなるという事だッ!』...これもなかなか」
-						CALL COLORMESSAGE14("　あのー치르노짱, 気づいてぇ....",C_GREEN,2,0)
-						PRINTFORML 「他には...」
-						CALL COLORMESSAGE14("　......치르노짱っ!",C_GREEN,2,0)
-						CALL COLORMESSAGE14("「おわっ!다이짱!?",C_AQUA,2,0)
-						PRINTFORML 「.........あれ, いつから起きてたの?」
-						CALL COLORMESSAGE14("　おはよう치르노짱.もう....少し前に起きてからずっと声かけてたんだよ?",C_GREEN,2,0)
-						PRINTFORMW 「이 몸としたことが全然気づかなかった....」
+						PRINTFORML 「『이 몸은 최강의 얼음 정령, 죽어도 물만 있으면 부활하노라!』...음」
+						CALL COLORMESSAGE14("　...으응, 치르노짱?",C_GREEN,2,0)
+						PRINTFORML 「『얼어붙은 세계 속에서 움직일 수 있는 건 오직 이 치르노 뿐이다!』...이것도 괜찮네」
+						CALL COLORMESSAGE14("　저기, 치르노짱? 뭐 하는 거야?",C_GREEN,2,0)
+						PRINTFORML 「다른 것도...」
+						CALL COLORMESSAGE14("　......치르노짱!",C_GREEN,2,0)
+						CALL COLORMESSAGE14("「우왓! 다이짱!?",C_AQUA,2,0)
+						PRINTFORML 「.........어라? 언제 일어난 거야?」
+						CALL COLORMESSAGE14("　좋은 아침, 치르노짱. 그....조금 전부터 계속 말 걸고 있었어",C_GREEN,2,0)
+						PRINTFORMW 「크읏, 이 몸도 눈치채지 못했다니....」
 						
 				ENDSELECT
 			ELSE
@@ -821,14 +822,14 @@ SETCOLOR C_AQUA
 						;PRINTFORML 
 					CASEELSE
 						SIF DAY:2 == 4
-							CALL COLORMESSAGE14("　...くしゅん!.さ, 寒いよぉ.なんでぇ....",C_GREEN,2,0)
+							CALL COLORMESSAGE14("　...에취!.왜, 왠지 춥네....",C_GREEN,2,0)
 						CALL COLORMESSAGE14("　...?.",C_GREEN,2,0)
-						PRINTFORML 「ぐぉー...ぐぉー...」	
-						CALL COLORMESSAGE14("　치르노...さん?どうして私のべッドの中に?",C_GREEN,2,0)
-						PRINTFORML 「んがっ...あれ, 이 몸なんでここで寝てるんだ?」
-						PRINTFORML 「...えーっと, ......思い出した!」
-						PRINTFORML 「暇だから遊びに行ったら, あんたがまだ寝てたからベッドの中で待たせてもらったんだ」
-						CALL COLORMESSAGE14("　...そ, そうだったんですね.",C_GREEN,2,0)
+						PRINTFORML 「쿨...쿠울...」	
+						CALL COLORMESSAGE14("　치르노...씨? 왜 제 침대 안에서 같이 주무시던 거죠?",C_GREEN,2,0)
+						PRINTFORML 「으음...어라? 이 몸이 왜 여기서 자던 거지?」
+						PRINTFORML 「...그게, 그러니까......생각났다!」
+						PRINTFORML 「너랑 놀려고 찾아왔다가, 네가 자는 걸 보고 기다려주려다가 그만」
+						CALL COLORMESSAGE14("　...그, 그렇군요.",C_GREEN,2,0)
 				ENDSELECT
 			ENDIF
 			RETURN 1
@@ -850,13 +851,14 @@ SETCOLOR C_AQUA
 				;PRINTFORML 
 				;PRINTFORMW 
 			CASEELSE
-				PRINTFORML 「おっきろー!」ﾄﾞｰﾝ!
-				CALL COLORMESSAGE14("　ゴフッ!...チ, 치르노짱.ベッドにダイブはやめて....",C_GREEN,2,0)
-				CALL COLORMESSAGE14("「だって다이짱が寝てるの見たら飛び込みたくなっちゃたもん」",C_AQUA,2,0)
-				CALL COLORMESSAGE14("　...そんな悪い娘は抱きしめちゃうよ!",C_GREEN,2,0)
-				CALL COLORMESSAGE14("「キャー♪」ｷﾞｭｷﾞｭｰ",C_AQUA,2,0)
-				CALL COLORMESSAGE14("「よし, 다이짱で이 몸も満たされたし...」",C_AQUA,2,0)
-				PRINTFORMW 「ほらほら, 早く起きて遊びに行こ!」
+				PRINTFORML 「일-어-나-!」두웅
+				CALL COLORMESSAGE14("　크헉!...치, 치르노짱. 침대에 다이빙은 그만둬....」",C_GREEN,2,0)
+				CALL COLORMESSAGE14("「하지만 다이짱이 자는 걸 보고 있으면, 이렇게 다이빙하고 싶은 걸?」",C_AQUA,2,0)
+				CALL COLORMESSAGE14("「　...그런 나쁜 아이는 이렇게 끌어안아버릴거야!」",C_GREEN,2,0)
+				;제 마음을 도려내는 분충은 용서하지 않아요!
+				CALL COLORMESSAGE14("「히힛-♪」쓰담쓰담",C_AQUA,2,0)
+				CALL COLORMESSAGE14("「좋아, 다이짱도 이 몸도 둘 다 일어났겠다...」",C_AQUA,2,0)
+				PRINTFORMW 「오늘도 놀러 가자! 빨리빨리!」
 		ENDSELECT
 		RETURN 1
 	ENDIF
@@ -866,10 +868,10 @@ SETCOLOR C_AQUA
 	LOCAL:1 = 1
 	;-------------------------------------------------
 	IF LOCAL:1 && ARG == 3
-		CALL COLORMESSAGE14("　ん, んぅ...",C_GREEN,2,0)
-		PRINTFORML 「グー...すやー...」
-		CALL COLORMESSAGE14("　...치르노짱まだ寝てる.",C_GREEN,2,0)
-		CALL COLORMESSAGE14("　起こさないようゆっくり起きなくちゃ....そーっと, そーっと....",C_GREEN,2,0)
+		CALL COLORMESSAGE14("　응, 으으...",C_GREEN,2,0)
+		PRINTFORML 「음냐...다이짱...좋아해...쿠울...」
+		CALL COLORMESSAGE14("　...치르노짱은 아직 자고 있구나.",C_GREEN,2,0)
+		CALL COLORMESSAGE14("　깨우지 않게 조심히 일어나자....슬금, 슬금....",C_GREEN,2,0)
 		RETURN 1
 	ENDIF
 	;-------------------------------------------------
@@ -885,10 +887,14 @@ SETCOLOR C_AQUA
 		LOCAL:1 = 1
 		;-------------------------------------------------
 		IF LOCAL:1 && !ARG:1
-			PRINTFORML 「ふわぁ...」
-			PRINTFORML 「んー...おはよう%CALLNAME:MASTER%, ...あれ?」
-			PRINTFORML 「もしかしてずーっと起きててくれたの?」
-			PRINTFORML 「...そんなわけないよね.さ, 私も支度しなきゃ」
+			;PRINTFORML 「흐암...」
+			;PRINTFORML 「응-...좋은 아침, %CALLNAME:MASTER%...어라?」
+			;PRINTFORML 「혹시 계속 일어나 있었던거야?」
+			;PRINTFORML 「...그럴리가 없겠지. 자, 도 준비해볼까」
+			;여기서 아타이가 아니라 와타시라고 적혀있었음. 남들 앞에선 아타이라고 하지만 사실은 와타시를 1인칭으로 쓰는 게 아닐까?
+			;라고 생각했는데 아래 내용을 보니 그냥 루나 구상 복붙이었나 보네
+			PRINTFORML 「...응? 내가 왜 여기서...」
+			PRINTFORMW 
 			RETURN 1
 		ENDIF
 		;-------------------------------------------------
@@ -897,15 +903,19 @@ SETCOLOR C_AQUA
 		LOCAL:1 = 1
 		;-------------------------------------------------
 		IF LOCAL:1 && ARG:1 == 1
-			PRINTFORML 「あふ...」
-			PRINTFORML 「もう朝...?おはよう...」
-			PRINTFORML 「ちょっと夜更かししすぎたかしら.まだ眠い...」
-			PRINTFORML 「...%CALLNAME:MASTER%, ちょっと来てくれない?」
-			PRINTFORML 「うん, そこに座って...ふぅ...」
-			PRINTFORML ルナはベッドに腰掛ける%CALLNAME:MASTER%に身体をもたれかかる.
-			PRINTFORML 「%CALLNAME:MASTER%が近くにいて...落ち着く」
-			PRINTFORMW 「もう少しこのまま...」
-			
+			;PRINTFORML ルナはベッドに腰掛ける%CALLNAME:MASTER%に身体をもたれかかる. 가 원문인 걸 보면 루나 구상에서 베껴온 듯. 근데 치르노랑 안 어울려!
+			;그렇다는 이유로, 자체적으로 수정함
+			PRINTFORML 「으응...?」
+			PRINTFORML 「벌써 아침이야...? 흐아암...」
+			PRINTFORML 「밤 늦게까지 놀아서 그렇다고? 아냐! 이 몸은 쌩쌩하거든!...」
+			PRINTFORML 「그러니까......쿠울...」
+			PRINTFORML 쌩쌩하다고 하긴 했지만, 역시 허세였나보다.
+			PRINTFORML 바닥으로 쓰러지려고 하는 치르노를 공주님 안기로 받아내고, 다시 정신을 차릴 때까지 기다렸다.
+			PRINTFORML 「...지금 이 몸에게 무슨 짓을 하는 거야?...어?!」
+			PRINTFORML 「잠깐, 잠깐만! 떨어져! 떨어지라고!」
+			PRINTFORMW 잠시 뒤, 정신을 차린 치르노는 %CALLNAME:MASTER%에게 공주님 안기로 안겨져 있다는 걸 깨닫고는 얼굴을 붉히며 바둥거렸다.
+			PRINTFORML 「으으...최강인 이 몸을 이렇게 취급하다니, 분해!」
+			PRINTFORMW 「...뭐, 이따가 같이 놀아준다면 용서는 해주겠지만」
 			RETURN 1
 		ENDIF
 		PRINTFORMW 
@@ -944,23 +954,24 @@ SETCOLOR C_AQUA
 		ELSEIF TALENT:사모
 			SELECTCASE RAND:3
 				CASE 1
-					PRINTFORML 「이 몸もう寝る...Zzz...」
-					CALL COLORMESSAGE14("　치르노짱.こんなとこで寝たら風邪ひいちゃ...",C_GREEN,1,0)
-					CALL COLORMESSAGE14("　...氷精って風邪ひかないかもしれないけど, おうちに帰ろ?",C_GREEN,2,0)
+					PRINTFORML 「분하다...」
+					PRINTFORML 「이 몸도, 여기까지인가...Zzz...」
+					CALL COLORMESSAGE14("　치르노짱. 이런 곳에서 자면 감기에 걸릴 텐데...",C_GREEN,1,0)
+					CALL COLORMESSAGE14("　...얼음의 요정도 감기에 걸리나? 아무튼, 집에 가서 자는 게 좋을텐데...",C_GREEN,2,0)
 				CASE 0
-					PRINTFORML 「しゃべり足りないのに眠たくなってきた....夢魔のやつめ...」
-					PRINTFORMW 「이 몸は...これしきの睡魔に......負けるものか.........」
-					CALL COLORMESSAGE14("　.........",C_GREEN,1,0)
-					CALL COLORMESSAGE14("　毛玉が一匹...毛玉が二匹...毛玉が三匹...",C_GREEN,1,0)
-					CALL COLORMESSAGE14("「毛玉が四匹...けだま...が九...ひ...ぐぅ",C_AQUA,1,0)
-					CALL COLORMESSAGE14("　よいしょっと, ふふ...치르노짱は軽いねぇ.",C_GREEN,1,0)
-					CALL COLORMESSAGE14("　送ってあげる....今日も一日おつかれさま치르노짱.",C_GREEN,2,0) 
+					PRINTFORML 「왠지 모르겠지만 피곤해....몽마 그 녀석의 짓인가...」
+					PRINTFORMW 「이 몸이...이까짓 수마에......떨어질까보냐.........」
+					CALL COLORMESSAGE14("「　.........」",C_GREEN,1,0)
+					CALL COLORMESSAGE14("「　양이 한마리...양이 두마리...양이 세마리...」",C_GREEN,1,0)
+					CALL COLORMESSAGE14("「양이 네마리...양이...아홉...마...리...」",C_AQUA,1,0)
+					CALL COLORMESSAGE14("「　후후, 자기 시작했어...역시 치르노짱은 귀엽다니까.」",C_GREEN,1,0)
+					CALL COLORMESSAGE14("「　집까지 데려다줄게....오늘 하루도 수고 많았어, 치르노짱.」",C_GREEN,2,0) 
 				CASEELSE
-					PRINTFORML 「まだ帰りたくない...もっと遊ぶ...」
-					CALL COLORMESSAGE14("　치르노짱眠くてフラフラしてる.もうお休みしよ?",C_GREEN,1,0)
-					PRINTFORML 「眠たくないし...ホント...ぐぅ...」
-					CALL COLORMESSAGE14("　よしよし, 明日もいっしょに遊べるから, ね?",C_GREEN,1,0)
-					CALL COLORMESSAGE14("「むぅ...約束だよ...」",C_AQUA,2,0)
+					PRINTFORML 「더 놀 수 있어...아직...」
+					CALL COLORMESSAGE14("「　치르노짱, 졸려보이는데 이제 자러 가는 게 어때?」",C_GREEN,1,0)
+					PRINTFORML 「졸리지 않아...정말...로...」
+					CALL COLORMESSAGE14("「　좋아좋아, 오늘은 푹 쉬고 내일 더 재밌게 노는 건 어떨까?」",C_GREEN,1,0)
+					CALL COLORMESSAGE14("「으응...약속한거야...?」",C_AQUA,2,0)
 			ENDSELECT
 		ELSE
 			SELECTCASE RAND:3
@@ -971,7 +982,7 @@ SETCOLOR C_AQUA
 					;PRINTFORML 
 					;PRINTFORMW 
 				CASEELSE
-					PRINTFORML 「今日もいっぱい遊んだー!帰って寝る!」
+					PRINTFORML 「오늘도 실컷 놀았으니, 이제 잘 거야!」
 			ENDSELECT
 		ENDIF
 		RETURN 1
@@ -990,14 +1001,14 @@ SETCOLOR C_AQUA
 				;CASE 1
 					;PRINTFORML 
 				CASE 0
-					PRINTFORML 「ぽー......」
-					CALL COLORMESSAGE14("（そろそろ치르노짱寝る時間みたい.",C_GREEN,1,0)
+					PRINTFORML 「하암......」
+					CALL COLORMESSAGE14("（슬슬 치르노짱이 잘 시간이 다가온 것 같네.",C_GREEN,1,0)
 					PRINTFORMW 
 				CASEELSE
-					PRINTFORML 「むにゃ...」
-					CALL COLORMESSAGE14("　それでね.その時に.......あれ?",C_GREEN,1,0)
-					CALL COLORMESSAGE14("　치르노짱もしかして眠たい?",C_GREEN,1,0)
-					PRINTFORMW 「...はっ!起きてる!起きてるよ!」
+					PRINTFORML 「흠냐아-...」
+					CALL COLORMESSAGE14("　그래서, 그 때.......어라?",C_GREEN,1,0)
+					CALL COLORMESSAGE14("　치르노짱, 혹시 졸린 거야?",C_GREEN,1,0)
+					PRINTFORMW 「...핫! 그런 거 아냐! 아직 쌩쌩하다고!」
 			ENDSELECT
 		ELSE
 			SELECTCASE RAND:3
@@ -1005,11 +1016,11 @@ SETCOLOR C_AQUA
 					;PRINTFORML 
 					;PRINTFORMW 
 				CASE 0
-					PRINTFORML 「눈꺼풀이 점점..감겨와..질 수는...없..지.....」
+					PRINTFORML 「눈꺼풀이 점점..감겨와..질 수는...없..어.....」
 					PRINTFORMW 
 				CASEELSE
 					PRINTFORML 「하암...」
-					CALL COLORMESSAGE14("　크고, 아름다워...",C_GREEN,1,0)
+					CALL COLORMESSAGE14("치르노짱의 하품...　크고, 아름다워...",C_GREEN,1,0)
 					PRINTFORMW 
 			ENDSELECT
 		ENDIF
@@ -1028,15 +1039,15 @@ SETCOLOR C_AQUA
 		ELSEIF TALENT:사모
 			SELECTCASE RAND:3
 				CASE 1
-					PRINTFORML 「すぴーすぴー......えへへ...」
-					CALL COLORMESSAGE14("（笑ってる...かわいい）",C_GREEN,1,0)
-					CALL COLORMESSAGE14("（楽しい夢を見てるのかな?）",C_GREEN,2,0)
+					PRINTFORML 「음냐, 음냐-......에헤헤...」
+					CALL COLORMESSAGE14("（웃는 얼굴...귀여워）",C_GREEN,1,0)
+					CALL COLORMESSAGE14("（즐거운 꿈을 꾸고 있나 보네）",C_GREEN,2,0)
 				CASE 0
-					PRINTFORML 「むにゃ...んん」
-					CALL COLORMESSAGE14("（いい子で寝てるんだから起こさないようにしなくちゃ）",C_GREEN,2,0)
+					PRINTFORML 「음냐...으응」
+					CALL COLORMESSAGE14("（잘 자고 있는 것 같으니 깨우지 말아야지）",C_GREEN,2,0)
 				CASEELSE
-					PRINTFORML 「グゥグゥ...」
-					CALL COLORMESSAGE14("（치르노짱よく寝てる...）",C_GREEN,2,0)					
+					PRINTFORML 「흐아암...후으응...」
+					CALL COLORMESSAGE14("（치르노짱, 잘 자...）",C_GREEN,2,0)					
 			ENDSELECT
 		ELSE
 			SELECTCASE RAND:3
@@ -1044,10 +1055,10 @@ SETCOLOR C_AQUA
 					PRINTFORML 「Zzz...」
 					PRINTFORMW 
 				CASE 0
-					PRINTFORML 「グースカピー...」
-					PRINTFORMW 
+					PRINTFORML 「후후후후...」
+					PRINTFORMW 즐거운 꿈을 꾸고 있는 걸까?
 				CASEELSE
-					PRINTFORML 「グガー...グガー...」
+					PRINTFORML 「드르렁...드르렁...」
 					PRINTFORMW 
 			ENDSELECT
 		ENDIF
@@ -1078,26 +1089,26 @@ SETCOLOR C_AQUA
 					;PRINTFORML 
 					;PRINTFORMW 
 				CASE 0
-					PRINTFORML 「はぁ～...」
-					PRINTFORML 「へやぁ～...」
-					PRINTFORML 「ふえぇ～......」
-					CALL COLORMESSAGE14("　치르노짱が少し溶けちゃってる....",C_GREEN,1,0)
+					PRINTFORML 「흐으으...」
+					PRINTFORML 「으흣, 흐으...」
+					PRINTFORML 「흐에에......」
+					CALL COLORMESSAGE14("　치르노짱이 조금 녹아버렸어....",C_GREEN,1,0)
 					PRINTFORMW 
 				CASEELSE
-					PRINTFORML 「이 몸の限界はこんなんじゃない筈だ...!」
-					CALL COLORMESSAGE14("「見ててよ다이짱.今이 몸は限界を超えるっ!」",C_AQUA,1,0)
-					CALL COLORMESSAGE14("　大人しく休も, ね?",C_GREEN,1,0)
+					PRINTFORML 「이 몸의 한계는 이게 아니라구!」
+					CALL COLORMESSAGE14("「봐봐! 아직 멀쩡하니까...!」",C_AQUA,1,0)
+					CALL COLORMESSAGE14("　잠깐이면 되니까, 조용히 쉬자. 응?",C_GREEN,1,0)
 			ENDSELECT
 		ELSE
 			SELECTCASE RAND:3
 				CASE 1
-					PRINTFORML 「少し休まないともう動けない...」
+					PRINTFORML 「조금 쉬어야 움직일 수 있겠어...」
 					PRINTFORMW 
 				CASE 0
-					PRINTFORML 「なんのこれしき...!」
+					PRINTFORML 「힘들어...」
 					PRINTFORMW 
 				CASEELSE
-					PRINTFORMW 「く, も, もうだめだー」
+					PRINTFORMW 「지쳤어...」
 			ENDSELECT
 		ENDIF
 		RETURN 1
@@ -2040,13 +2051,14 @@ IF LOCAL
 		ELSE
 			SELECTCASE RAND:3
 				CASE 1
-					PRINTFORML 「すやぁ...」
+					PRINTFORML 「흠냐...」
 					PRINTFORMW 
 				CASE 0
-					PRINTFORML 「ぐぅー...ぐぅー...」	
+					PRINTFORML 「쿨...쿠울...」	
 					PRINTFORMW 
 				CASEELSE
-					PRINTFORML 「うへへ...一面氷漬け...」
+					PRINTFORML 「으헤헤...주변이 얼음 투성이...」
+					PRINTFORMW 아마도 잠꼬대를 하는 것 같다.
 			ENDSELECT
 		ENDIF
 		RETURN 1
@@ -2102,14 +2114,14 @@ IF LOCAL
 		ELSE
 			SELECTCASE RAND:3
 				CASE 1
-					PRINTFORML 「遊ぶのは起きてから!でてけ!」
+					PRINTFORML 「지금은 피곤하니까 빨리 나가!」
 					PRINTFORMW 
 				CASE 0
-					PRINTFORML 「氷の抱き枕にしてやろうか!」
+					PRINTFORML 「얼음 죽부인으로 만들어버리기 전에 나가!」
 					PRINTFORMW 
 				CASEELSE
-					PRINTFORML 「이 몸ねむい」
-					PRINTFORMW 「ジャマすんな!」
+					PRINTFORML 「이 몸의 잠을」
+					PRINTFORMW 「방해하지마!」
 			ENDSELECT
 		ENDIF
 		RETURN 1
@@ -2164,16 +2176,16 @@ IF LOCAL
 
 		IF IS_WEEKEND(DAY)
 			;土日は三妖精の家で遊ぶ
-				PRINTFORML 「あ!今日は三妖精のやつらと遊ぶ約束してたんだ」
-				PRINTFORMW 「今日こそギャフンと言わせてやる!」
+				PRINTFORML 「앗! 오늘은 요정 3명이랑 놀기로 했었지」
+				PRINTFORMW 「오늘이야말로 누가 최강인지 보여주겠어-!」
 		ELSEIF TIME:5 == 8
 		;朝起きて, 雪が降っていると湖畔で遊ぶ
-			PRINTFORML 「雪だあー!!遊ぶぞおー!!」
-			PRINTFORMW 「喜んで庭を駆け回るのは, 犬じゃなく氷精の専売特許だ!」
+			PRINTFORML 「눈이다!! 노올자-!!」
+			PRINTFORMW 「정원에서 뛰노는 건 개가 아니라 얼음 요정의 전매특허니까!」
 		ELSEIF (DAY:2 == 2 && TIME:5 < 2)
 		;夏晴れ晴天なら人間の里でアイス屋
-			PRINTFORML 「うぅ～...この暑さ, これは...アイスが欲しくなるね」
-			PRINTFORMW 「こうしちゃいられない.さっそくアイスを売りにいかないと」
+			PRINTFORML 「으으...너무 더워...아이스가 필요하겠어...」
+			PRINTFORMW 「! 더위에 기죽을 수는 없지! 지금이야 말로 아이스를 팔아야 해!」
 		ENDIF
 		RETURN 1
 	ENDIF
@@ -2189,34 +2201,37 @@ IF LOCAL
 		;土日は三妖精の家で遊ぶ
 			SELECTCASE RAND:3
 				CASE 1
-					PRINTFORML 「よぉし이 몸についてこい!」
+					PRINTFORML 「좋았어, 이 몸을 따라와!」
 				CASE 0
-					PRINTFORML 「次は이 몸がヒーロー役ね!」
+					PRINTFORML 「이번에는 이 몸이 히어로 역할이야!」
 				CASEELSE
-					PRINTFORML 「今度は何で遊ぶんだ?」
+					PRINTFORML 「이번에는 뭐 하고 놀거야?」
 			ENDSELECT
 		ELSEIF CFLAG:MASTER:현재위치 == 343
 		;朝起きて, 雪が降っていると湖畔で遊ぶ
 			SELECTCASE RAND:3
 				CASE 1
-					PRINTFORML 「せっかくだから家のかまくらを増築しようかな...」
+					PRINTFORML 「모처럼이니 가마쿠라를 증축해볼까...」
 				CASE 0
-					PRINTFORML 「アイスバーンにして誰か転ばせてやろーっと」
+					PRINTFORML 「아이스 번으로 만들어서 누군가를 넘어뜨려볼까」
 				CASEELSE
-					PRINTFORML 「雪やこんこん♪キツネもコンコン♪ふってもふっても腹減りやまぬ♪」
-					PRINTFORML 「イ～ヌはヨロヨロ♪にわとりコケコ♪ネコは玉食って丸くなる♪」
+					;PRINTFORML 「雪やこんこん♪キツネもコンコン♪ふってもふっても腹減りやまぬ♪」
+					;PRINTFORML 「イ～ヌはヨロヨロ♪にわとりコケコ♪ネコは玉食って丸くなる♪」
+					PRINTFORML 「손이 시려워♪ 발이 시려워♪ 얼음 요정 때문에♪」
+					PRINTFORML 「손이 꽁꽁꽁♪ 발이 꽁꽁꽁♪ 얼음 요정 때문에♪」
+					;무슨 동요 비슷한 걸 부르는 것 같은데, 뭔지도 잘 모르겠고 잘 살릴 자신 없어서 여기다가는 그냥 꽁꽁꽁이라는 동요 가사를 써먹었음
 			ENDSELECT
 		ELSEIF CFLAG:MASTER:현재위치 == 2 || CFLAG:MASTER:현재위치 == 202
 		;夏晴れ晴天なら人間の里でアイス屋
 			SELECTCASE RAND:3
 				CASE 1
-					PRINTFORML 「アイスーアイスはいらんかねー」
-					PRINTFORML 「치르노印の最強アイスだよー」
+					PRINTFORML 「시원한-아이스-먹지 않을래?」
+					PRINTFORML 「그것도 치르노표 최강의 아이스라구!」
 				CASE 0
-					PRINTFORML 「う"ー...あち"ー...」
-					PRINTFORML 「アイスおいしいー...」ﾍﾟﾛﾍﾟﾛ
+					PRINTFORML 「아, 더워...」
+					PRINTFORML 「...이럴 때는 역시 아이스가 최고야!」 낼름낼름
 				CASEELSE
-					PRINTFORML 「当たりがでたらもう１本だよー」
+					PRINTFORML 「당첨이 나온다면 공짜로 한 개 더!」
 					
 			ENDSELECT
 		ENDIF
@@ -2230,9 +2245,9 @@ IF LOCAL
 	;-------------------------------------------------
 	IF LOCAL:1 && ARG == 3
 		IF CFLAG:행동 == 5 && CFLAG:MASTER:현재위치 == 2 || CFLAG:행동 == 5 && CFLAG:MASTER:현재위치 == 202
-			PRINTFORMW 「今日はこれで閉店だよ!」
+			PRINTFORMW 「오늘은 이걸로 끝이야!」
 		ELSE
-			PRINTFORMW 「あー楽しかった!」
+			PRINTFORMW 「아-즐거웠어!」
 		RETURN 1
 		ENDIF
 	ENDIF
@@ -2268,32 +2283,32 @@ IF LOCAL
 					;PRINTFORML 
 					;PRINTFORMW 
 				CASE 0
-					PRINTFORML 「.........ジーッ...」
-					CALL COLORMESSAGE14("　う....",C_GREEN,1,0)
-					CALL COLORMESSAGE14("　もう, 今日だけだよ?",C_GREEN,1,0)
-					CALL COLORMESSAGE14("「やった!다이짱大好き!」",C_AQUA,2,0)
-					PRINTFORMW 「ゲフー, おいしかったー!」
+					PRINTFORML 「............」빠안-
+					CALL COLORMESSAGE14("　으....",C_GREEN,1,0)
+					CALL COLORMESSAGE14("　저기, 왜 나를 빤히 바라보고 있는 거야?",C_GREEN,1,0)
+					CALL COLORMESSAGE14("「좋았어! 다이짱의 빈틈 발견!」",C_AQUA,2,0)
+					PRINTFORMW 「크하하, 맛있게 먹을게!」
 				CASEELSE
-					PRINTFORML 「これ, 一口ちょうだい」
-					PRINTFORML 「これ, 一口ちょうだい」
-					PRINTFORML 「これ, 一口ちょうだい」
+					PRINTFORML 「이거, 한 입만 주면 안 돼?」
+					PRINTFORML 「이거, 한 입만 주면 안 돼?」
+					PRINTFORML 「이거, 한 입만 주면 안 돼?」
 					PRINTFORML ・
 					PRINTFORML ・
 					PRINTFORML ・
-					PRINTFORMW 「ゲプッ, ごちそうさまー!」
+					PRINTFORMW 「아싸, 결국 받아냈다!」
 			ENDSELECT
 
 		ELSE
 			SELECTCASE RAND:3
 				CASE 1
-					PRINTFORML 「이 몸の前にうまそうな料理がある」
-					PRINTFORMW 「これはお供えというやつだね, いただきまーす!」
+					PRINTFORML 「이 몸의 앞에 음식이 있다」
+					PRINTFORMW 「이것은 공양이라는 녀석이겠지? 그럼 잘 먹겠습니다-!」
 				CASE 0
-					PRINTFORMW 「ごちそうさまー!」ゲプッ
-					CALL COLORMESSAGE14("　い, いつの間に...?",C_GREEN,1,0)
+					PRINTFORMW 「이건 이 몸이 받아가도록 하지!」
+					CALL COLORMESSAGE14("　어, 어느새...?",C_GREEN,1,0)
 				CASEELSE
-					PRINTFORML 「食べてもいいよね?」
-					PRINTFORMW 「答えは聞いてない!」ﾑｼｬﾑｼｬ!
+					PRINTFORML 「먹어도 되지?」
+					PRINTFORMW 「아, 네가 뭐라고 답해도 먹을 거지만!」쿠구-웅
 			ENDSELECT
 		ENDIF
 		RETURN 1
@@ -2849,7 +2864,7 @@ IF LOCAL
 			ELSEIF TALENT:사모
 				PRINTFORML 
 			ELSE
-				PRINTFORML 「もう夜かー.帰って寝る」
+				PRINTFORML 「벌써 밤이네. 돌아가야겠는걸」
 			ENDIF
 			RETURN 1
 		ENDIF
@@ -2862,12 +2877,15 @@ IF LOCAL
 			IF CFLAG:318 == 1
 				PRINTFORML 
 			ELSEIF TALENT:연모
-				PRINTFORML 
+				PRINTFORML 「이로써 우리들의 최강 전설이 새로 하나 늘었네」
+				CALL COLORMESSAGE14("「이러다간, 언젠가 다이짱도 최강이라 불리는 거 아냐?",C_AQUA,1,0)
+				CALL COLORMESSAGE14("　후후, 그럴지도 모르겠네.",C_GREEN,1,0)
+				PRINTFORMW 「그럼 내일 또 보자! 안녕!」
 			ELSEIF TALENT:사모
-				PRINTFORML 「これで이 몸の最強伝説がまた１つ世に出回ったわ」
-				CALL COLORMESSAGE14("「これならいつか다이짱も最強の妖精として呼ばれるねこりゃ.",C_AQUA,1,0)
-				CALL COLORMESSAGE14("　ふふ, そうかもしれないね.",C_GREEN,1,0)
-				PRINTFORMW 「また明日も遊ぼ!じゃあね!」
+				PRINTFORML 「이로써 우리들의 최강 전설이 새로 하나 늘었네」
+				CALL COLORMESSAGE14("「이러다간, 언젠가 다이짱도 최강이라 불리는 거 아냐?",C_AQUA,1,0)
+				CALL COLORMESSAGE14("　후후, 그럴지도 모르겠네.",C_GREEN,1,0)
+				PRINTFORMW 「그럼 내일 또 보자! 안녕!」
 			ELSE
 				PRINTFORML 
 			ENDIF
@@ -3164,11 +3182,11 @@ IF LOCAL
 			;ELSEIF TALENT:연모
 				;PRINTFORML 
 			ELSEIF TALENT:사모
-				PRINTFORML 「お風呂になんか入ったら이 몸溶けちゃうよ」
-				CALL COLORMESSAGE14("　そうだよね.ごめんね....",C_GREEN,1,0)
+				PRINTFORML 「왠지 뜨거운 물에 몸을 담그면 이 몸이 녹아버려서 말이지...」
+				CALL COLORMESSAGE14("　생각해보니 그러네. 신경쓰지 못해서 미안해....",C_GREEN,1,0)
 			ELSE
-				PRINTFORML 「氷風呂でも入りたいのか?」
-				CALL COLORMESSAGE14("　...やっぱりやめておきます.",C_GREEN,1,0)
+				PRINTFORML 「얼음 목욕이라도 하고 싶은 거야?」
+				CALL COLORMESSAGE14("　...역시, 그건 좀 힘들 것 같아",C_GREEN,1,0)
 			ENDIF
 			RETURN 1
 		ENDIF
@@ -3183,12 +3201,12 @@ IF LOCAL
 			;ELSEIF TALENT:연모
 				;PRINTFORML 
 			ELSEIF TALENT:사모
-				PRINTFORML 「氷で何重にもコーティングしてやればお風呂も平気だい!」
+				PRINTFORML 「얼음을 여러 겹 걸치면 뜨거운 물도 문제 없어!」
 				PRINTFORMW 
 			ELSE
-				CALL COLORMESSAGE14("　...もしかしてお風呂が怖いんですか?",C_GREEN,1,0)
-				PRINTFORML 「이 몸が風呂如きに恐れをなしてる?」
-				PRINTFORMW 「怖い物なんてあるもんか!そこまで言うなら入ってやろうじゃない!」
+				CALL COLORMESSAGE14("　...혹시 씻는 게 두려운 거야?",C_GREEN,1,0)
+				PRINTFORML 「이 몸을 뭐라고 생각하는 거야?」
+				PRINTFORMW 「이 몸은 어느 것도 두렵지 않아! 좋아, 같이 들어가주지!」
 			ENDIF
 			RETURN 1
 		ENDIF
@@ -3438,11 +3456,11 @@ IF LOCAL
 			IF LOCAL:1
 			;自分用メモ.そもそも恋慕じゃないと発生しない?
 				IF TALENT:사모
-					CALL COLORMESSAGE14("「だーいー짱ー!」",C_AQUA,1,0)
-					PRINTFORMW 「あーそーびーまーしょー!」
+					CALL COLORMESSAGE14("「다-이-짱-!」",C_AQUA,1,0)
+					PRINTFORMW 「같-이-노-올-자-아-!」
 				ELSE
-					PRINTFORML 「今日は絶好の探索日和だろ?」
-					PRINTFORMW 「あんたも이 몸のお供として連れてってやる」
+					PRINTFORML 「오늘은 탐색하기 좋은 날이네!」
+					PRINTFORMW 「너도 이 몸을 도와주면 좋겠는데」
 				ENDIF
 				RETURN 1
 			ENDIF
@@ -3454,13 +3472,13 @@ IF LOCAL
 			;-------------------------------------------------
 			IF LOCAL:1
 				IF TALENT:사모
-					CALL COLORMESSAGE14("「やった, 다이짱といっしょだ♪」",C_AQUA,1,0)
-					CALL COLORMESSAGE14("　お弁当用意しなくちゃ....ハンカチにティッシュに....",C_GREEN,1,0)
-					CALL COLORMESSAGE14("「다이짱早く早く!이 몸もう待ちきれないよ!」",C_AQUA,1,0)
-					CALL COLORMESSAGE14("　ふふ, そんな慌てなくても逃げたりしないから大丈夫だよ.",C_GREEN,1,0)
-					PRINTFORMW 「이 몸もう待ちきれないよ!」
+					CALL COLORMESSAGE14("「좋았어, 다이짱이랑 놀러간다♪」",C_AQUA,1,0)
+					CALL COLORMESSAGE14("　도시락에 손수건에....또 뭘 챙겨야하지....",C_GREEN,1,0)
+					CALL COLORMESSAGE14("「다이짱 빨리빨리! 이 몸, 더는 못 기다리겠어!」",C_AQUA,1,0)
+					CALL COLORMESSAGE14("　후후, 그렇게 재촉하지 않아도 도망가지 않으니까 걱정 마.",C_GREEN,1,0)
+					PRINTFORMW 「이 몸, 더는 못 참겠어!」
 				ELSE
-					PRINTFORML 「よし, 黙って이 몸についてこい!」
+					PRINTFORML 「좋아, 그렇다면 이 몸을 따라와!」
 				ENDIF
 				RETURN 1
 			ENDIF
@@ -3472,14 +3490,14 @@ IF LOCAL
 			;-------------------------------------------------
 			IF LOCAL:1
 				IF TALENT:사모
-					PRINTFORML 「이 몸が誘ってんのにぃ....ブー...」
-					CALL COLORMESSAGE14("　ごめんね.今日は別の用事があるの....",C_GREEN,1,0)
-					CALL COLORMESSAGE14("「えー..., 다이짱と一緒に行きたかったのに...」",C_AQUA,1,0)
-					CALL COLORMESSAGE14("　次は一緒に遊びに行こうね.",C_GREEN,1,0)
-					CALL COLORMESSAGE14("「忘れちゃヤダよ.ゼッタイだかんね!」",C_AQUA,1,0)
+					PRINTFORML 「이 몸의 권유를 거절하다니....으으...」
+					CALL COLORMESSAGE14("　미안. 오늘은 해야할 일이 있어서...",C_GREEN,1,0)
+					CALL COLORMESSAGE14("「하지만, 다이짱과 같이 놀러가고 싶었는데...」",C_AQUA,1,0)
+					CALL COLORMESSAGE14("　다음에는 꼭 같이 놀러가자. 새끼손가락 고리 걸고, 약속이야",C_GREEN,1,0)
+					CALL COLORMESSAGE14("「...그럼 약속한 거다! 다음에는 꼭 같이 놀러 가자!」",C_AQUA,1,0)
 					PRINTFORMW 
 				ELSE
-					PRINTFORML 「ふんだ!もう誘ってやらない!」
+					PRINTFORML 「흥이다! 이제 다시는 권유 안 해!」
 				ENDIF
 				RETURN 1
 			ENDIF
@@ -3646,11 +3664,11 @@ IF LOCAL
 	;-------------------------------------------------
 	IF LOCAL:1 && ARG == 1
 		IF TALENT:사모
-			CALL COLORMESSAGE14("「そんなことする다이짱なんかキライ!どっか行っちゃえ!」",C_AQUA,1,0)
-			PRINTFORMW 「もう顔なんか見たくもない!」
+			CALL COLORMESSAGE14("「그런 짓을 하는 다이짱 따위는 보고 싶지 않아! 저리 가버려!」",C_AQUA,1,0)
+			PRINTFORMW 「안 그러면 정말로 가만 안 둘 테니까!」
 		ELSE
-			PRINTFORML 「이 몸を怒らせてそんなに凍え死にたいか...」
-			PRINTFORMW 「氷精を舐めてると舌を火傷するよ!」
+			PRINTFORML 「뭐 하는 거야! 기분 나빠!」
+			PRINTFORMW 「이 바보똥개멍텅구리해삼말미잘아메바 녀석이!」
 		ENDIF
 		RETURN 1
 	ENDIF
