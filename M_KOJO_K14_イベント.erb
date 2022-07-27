@@ -104,7 +104,7 @@ IF FLAG:역극 == 13
 	PRINTFORML 
 	PRINTFORML [0] 동의하고 이용한다.（구상 일부 비표시）
 	PRINTFORML [1] 대요정의 옷을 입는다.（구상 전부 표시） 
-	PRINTFORML ※역주 : 대요정 플레이를 가정하고 짠 내용이 전체의 85퍼센트를 넘어갑니다. 다만 1번을 고를 경우 괴리감이 상당하니까 조심하세요 
+	PRINTFORML [2] 안내 사항 + 역주
 	INPUT
 	SELECTCASE RESULT
 		CASE 0
@@ -130,6 +130,11 @@ IF FLAG:역극 == 13
 					SIF TALENT:MASTER:가슴사이즈 < 0
 						PRINTFORMW 가슴이 엉망이긴 하지만 사소한 문제니까 넘어갑시다.
 			ENDIF
+		CASE 2
+			PRINTFORMW 간단한 안내 겸 역주입니다.
+			PRINTFORMW 이 구상은 대요정 플레이를 가정하고 짠 내용이 전체의 85퍼센트를 넘어갑니다.
+			PRINTFORMW 다만 1번을 고를 경우 괴리감이 상당할 테니까 이 점 유의해주세요.
+			GOTO LOOP
 		CASEELSE
 			GOTO LOOP
 		ENDSELECT
