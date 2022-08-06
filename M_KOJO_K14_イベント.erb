@@ -132,8 +132,9 @@ IF FLAG:역극 == 13
 			ENDIF
 		CASE 2
 			PRINTFORMW 간단한 안내 겸 역주입니다.
-			PRINTFORMW 이 구상은 대요정 플레이를 가정하고 짠 내용이 전체의 85퍼센트를 넘어갑니다.
-			PRINTFORMW 다만 1번을 고를 경우 괴리감이 상당할 테니까 이 점 유의해주세요.
+			PRINTFORMW 이 구상은 대요정 역극 플레이를 가정하고 짠 내용이 전체의 85퍼센트를 넘어갑니다.
+			PRINTFORMW 다만 역극 대요정이 아님에도 1번을 고를 경우 괴리감이 상당할 테니까 이 점 유의해주세요.
+			PRINTFORMW 아, 그리고 사모 대응 대사는 많이 있지만 연모 대응 대사는 하나도 없습니다. 연모 취득을 주의하세요.
 			GOTO LOOP
 		CASEELSE
 			GOTO LOOP
@@ -339,7 +340,7 @@ SETCOLOR C_AQUA
 						;PRINTFORMW 
 					CASE 0
 						PRINTFORML 「지~쳤~어. 이제 돌아갈래!」
-						CALL COLORMESSAGE14("오늘도 같이 놀아줘서 고마워, 치르노짱.",C_GREEN,2,0)
+						CALL COLORMESSAGE14("오늘도 같이 놀아줘서 고마워요, 치르노씨.",C_GREEN,2,0)
 						CALL COLORMESSAGE14("「뭐, 최강에게 이 정도는 별 것도 아니지!」",C_AQUA,2,0)
 					CASEELSE
 						PRINTFORML 「오늘도 이 몸의 최강 전설을 환상향에 널리 떨쳤다!」
@@ -375,7 +376,7 @@ SETCOLOR C_AQUA
 			PRINTFORMW 「...다고 할 줄 알았냐! 이 몸의 분노의 얼음탄이나 먹어버려!」
 			CALL COLORMESSAGE14("　꺄아앗?!",C_GREEN,2,0)
 			CALL COLORMESSAGE14("(...으응? 그렇게 얼음탄이 크지가 않아...）",C_GREEN,2,0)
-			PRINTFORMW 「한번만 더 그랬다간 얼음 동상으로 만들어버릴거다.」
+			PRINTFORMW 「...한번만 더 그랬다간 얼음 동상으로 만들어버릴거다. 각오해!」
 			RETURN 1
 		ENDIF
 		;-------------------------------------------------
@@ -442,7 +443,7 @@ SETCOLOR C_AQUA
 					CASE 0
 						PRINTFORML 「응? 뭐야, 너였어? 놀래키지 말라고」
 					CASEELSE
-						CALL COLORMESSAGE14("　아, 치르노짱!",C_GREEN,1,0)
+						CALL COLORMESSAGE14("　아, 치르노씨!",C_GREEN,1,0)
 						PRINTFORML 「...아까부터 눈치채고 있었다고?」
 						PRINTFORML 「네 놈, 보고 있구나!」
 						CALL COLORMESSAGE14("(　...? 나를 바라보고 있지만, 나에게 하는 말은 아냐...도대체 뭘까?)",C_GREEN,1,0)
@@ -493,7 +494,7 @@ SETCOLOR C_AQUA
 							PRINTFORML 「...? 이 몸이랑 같이 놀 생각이야?」
 							PRINTFORML 「그렇다면 도장깨기를 하러 가자!」
 							PRINTFORML 「빈곤한 무녀의 신사를 깨부수는 거야!」
-							CALL COLORMESSAGE14("　...도장깨기라고 해서, 정말로 깨부수는 건 아닐텐데...",C_GREEN,1,0)
+							CALL COLORMESSAGE14("　...도장깨기라고 해서, 정말로 깨부수는 건 아닐텐데요...",C_GREEN,1,0)
 							PRINTFORML 
 						CASEELSE
 							PRINTFORML 「여긴 이 몸의 성이라고. 흙 묻은 발로 들어오면 안 돼」
@@ -799,7 +800,7 @@ SETCOLOR C_AQUA
 						CALL COLORMESSAGE14("「다이짱, 기분 좋게 자는 것 같네...」",C_AQUA,2,0)
 						PRINTFORML 「깨우는 건 기분 나쁠 테니 그냥 기다릴까?」
 						PRINTFORML 「...」
-						PRINTFORML 「......」파닥파닥...
+						PRINTFORML 「......」파닥파닥
 						;치르노 날개 흔드는 의성음임
 						PRINTFORMW 「뭐, 기다리는 동안 최강다운 멋진 대사나 생각해야지!」
 						PRINTFORML .........
@@ -918,7 +919,11 @@ SETCOLOR C_AQUA
 			PRINTFORML 바닥으로 쓰러지려고 하는 치르노를 공주님 안기로 받아내고, 다시 정신을 차릴 때까지 기다렸다.
 			PRINTFORML 「...지금 이 몸에게 무슨 짓을 하는 거야?...어?!」
 			PRINTFORML 「잠깐, 잠깐만! 떨어져! 떨어지라고!」
-			PRINTFORMW 잠시 뒤, 정신을 차린 치르노는 %CALLNAME:MASTER%에게 공주님 안기로 안겨져 있다는 걸 깨닫고는 얼굴을 붉히며 바둥거렸다.
+			PRINTFORMW 잠시 뒤, 정신을 차린 치르노는 %CALLNAME:MASTER%에게 공주님 안기로 안겨져 있다는 걸 깨닫고는
+			IF TALENT:TARGET:연인
+				PRINTFORMW 볼을 붉히며 바둥거렸다.
+			ELSE
+				PRINTFORMW 격렬하게 바둥거렸다.
 			PRINTFORML 「으으...최강인 이 몸을 이렇게 취급하다니, 분해!」
 			PRINTFORMW 「...뭐, 이따가 같이 놀아준다면 용서는 해주겠지만」
 			RETURN 1
@@ -1025,7 +1030,7 @@ SETCOLOR C_AQUA
 					PRINTFORMW 
 				CASEELSE
 					PRINTFORML 「하암...」
-					CALL COLORMESSAGE14("치르노짱의 하품...　크고, 아름다워...",C_GREEN,1,0)
+					CALL COLORMESSAGE14("치르노씨의 하품...　크고, 아름다워...",C_GREEN,1,0)
 					PRINTFORMW 
 			ENDSELECT
 		ENDIF
@@ -1296,6 +1301,7 @@ SETCOLOR C_AQUA
 	;그외
 	PRINTFORML  
 ENDIF
+ENDIF
 RESETCOLOR
 RETURN 1
 
@@ -1506,7 +1512,7 @@ SETCOLOR C_AQUA
 				CASE 1
 					PRINTFORMW 「재밌어보이네? 나도 할래!」
 				CASE 0
-					PRINTFORMW 「그 녀석은 이 몸의 거라고!」
+					PRINTFORMW 「그 녀석은 이 몸의 장난감이라고-!」
 				CASEELSE
 					PRINTFORMW 「이 몸을 빼놓고 하는 건 용서 못 해!」
 			ENDSELECT
@@ -1757,7 +1763,7 @@ SETCOLOR C_AQUA
 			CALL COLORMESSAGE14("　오, 오늘은 날씨가 좋네!",C_GREEN,1,0)
 			CALL COLORMESSAGE14("\@ TIME:5 > 1 ? 태양이 보이지 않는데, 좋은 날씨라고? # 그러게, 하늘이 참 맑네. \@",C_AQUA,2,0)
 			PRINTFORML 「.........」
-			CALL COLORMESSAGE14("　.........；",C_GREEN,1,0)
+			CALL COLORMESSAGE14("　.........",C_GREEN,1,0)
 			CALL COLORMESSAGE14("　뭐, 뭔가 내게 용무라도?",C_GREEN,1,0)
 			PRINTFORML 「아까, 뭔가 흠칫! 하고 놀랐잖아? 아무래도 신경쓰이니까」
 			PRINTFORML 「이 근처를 서성거리는 건 질렸어. 네가 뭘 숨기고 있는지 찾는 게 더 재밌겠는걸?!」
@@ -3211,7 +3217,7 @@ IF LOCAL
 				PRINTFORML 「얼음을 여러 겹 걸치면 뜨거운 물도 문제 없어!」
 				PRINTFORMW 
 			ELSE
-				CALL COLORMESSAGE14("　...혹시 씻는 게 두려운 거야?",C_GREEN,1,0)
+				CALL COLORMESSAGE14("　...혹시 씻는 게 두려운 건가요?",C_GREEN,1,0)
 				PRINTFORML 「이 몸을 뭐라고 생각하는 거야?」
 				PRINTFORMW 「이 몸은 어느 것도 두렵지 않아! 좋아, 같이 들어가주지!」
 			ENDIF
